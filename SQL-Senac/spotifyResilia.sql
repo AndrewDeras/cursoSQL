@@ -1,0 +1,19 @@
+CREATE TABLE artistas(
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(100)
+);
+
+CREATE TABLE albuns(
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(100),
+    artista_id INT NOT NULL,
+    FOREIGN KEY (artista_id) REFERENCES artistas(id)
+);
+
+CREATE TABLE musicas(
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(100),
+    duracao INT NOT NULL,
+    album_id INT NOT NULL,
+    FOREIGN KEY (album_id) REFERENCES albuns(id)
+);

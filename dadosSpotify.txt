@@ -1,0 +1,20 @@
+SELECT * FROM artistas;
+
+INSERT INTO artistas (nome) VALUES ("Barry White");
+INSERT INTO artistas (nome) VALUES ("Burna Boy");
+INSERT INTO artistas (nome) VALUES ("Ed Sheeran");
+
+=============================================================
+
+SELECT * FROM albuns;
+
+INSERT INTO albuns (nome, artista_id) VALUES ("Cant get enough", 1);
+INSERT INTO albuns (nome, artista_id) VALUES ("African Giant", 2);
+INSERT INTO albuns (nome, artista_id) VALUES ("+", 3);
+
+===============================================================
+
+SELECT * FROM musicas;
+INSERT INTO musicas (nome, duracao, album_id) VALUES("Cant get enough of your love, babe", 4, 1);
+INSERT INTO musicas (nome, duracao, album_id) VALUES("On the low", 3, 2);
+INSERT INTO musicas (nome, duracao, album_id) VALUES("Kiss me", 5, 3);
