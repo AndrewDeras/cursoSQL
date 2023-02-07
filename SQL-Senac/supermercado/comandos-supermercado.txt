@@ -1,0 +1,32 @@
+CREATE DATABASE supermercado
+CHARACTER SET utf8
+COLLATE utf8_unicode_ci
+;
+
+USE supermercado;
+
+CREATE TABLE cliente (
+	id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100),
+    cpf VARCHAR(14),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE fornecedor (
+	id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100),
+    cnpj VARCHAR(18),
+    PRIMARY KEY (id)
+);
+
+SELECT * FROM produto;
+
+CREATE TABLE produto (
+	id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100),
+    validade date,
+    fabricacao date,
+    fornecedor_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (fornecedor_id) REFERENCES fornecedor(id)
+);
